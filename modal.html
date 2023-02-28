@@ -1,0 +1,76 @@
+<div class="modal fade" id="addModall" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog" style="max-width:35% !important;">
+          <div class="modal-content">
+              <div class="modal-header bbw">
+                  <h5 class="modal-title blue"><i class="fas fa-user-secret"></i> <?php echo __('New Proxy Settings'); ?></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+  
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-12">
+                          <form action="#" method="POST" id="new_proxy_form">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <div class="form-group">
+                                          <label><?php echo __('Proxy'); ?></label>
+                                          <input type="text" class="form-control" id="proxy" name="proxy">
+                                      </div>
+                                  </div>
+                                  <div class="col-12">
+                                      <div class="form-group">
+                                          <label><?php echo __('Proxy Port'); ?></label>
+                                          <input type="text" class="form-control" id="proxy_port" name="proxy_port">
+                                      </div>
+                                  </div>
+                                  <div class="col-12">
+                                      <div class="form-group">
+                                          <label><?php echo __('Proxy Username'); ?></label>
+                                          <input type="text" class="form-control" id="proxy_username" name="proxy_username">
+                                      </div>
+                                  </div>
+                                  <div class="col-12">
+                                      <div class="form-group">
+                                          <label><?php echo __('Proxy Password'); ?></label>
+                                          <input type="text" class="form-control" id="proxy_password" name="proxy_password">
+                                      </div>
+                                  </div>
+  
+                                  {{-- @if(session()->userdata("user_type") == "Admin") --}}
+                                      <div class="col-12">
+                                          <div class="form-group">
+                                              <label for="user_type" > <?php echo __('Proxy Permission');?></label>
+                                              <div class="custom-switches-stacked mt-2">
+                                                  <div class="row">   
+                                                      <div class="col-6">
+                                                          <label class="custom-switch">
+                                                              <input type="radio" name="permission" value="everyone" checked class="user_type custom-switch-input">
+                                                              <span class="custom-switch-indicator"></span>
+                                                              <span class="custom-switch-description"><?php echo __('Everyone'); ?></span>
+                                                          </label>
+                                                      </div>                        
+                                                      <div class="col-6">
+                                                          <label class="custom-switch">
+                                                              <input type="radio" name="permission" value="only me" class="user_type custom-switch-input">
+                                                              <span class="custom-switch-indicator"></span>
+                                                              <span class="custom-switch-description"><?php echo __('Only me'); ?></span>
+                                                          </label>
+                                                      </div>
+                                                  </div>                                  
+                                              </div>
+                                          </div> 
+                                      </div>
+                                  {{-- @endif --}}
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="modal-footer bg-whitesmoke">
+                  <button type="button" class="btn btn-primary" id="proxy_save"><i class="fa fa-save"></i> <?php echo __('Save'); ?></button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php echo __('Close'); ?></button>
+              </div>
+          </div>
+      </div>
+</div>
